@@ -8,7 +8,7 @@
 
     <link rel="shortcut icon" href="https://ui-avatars.com/api/?name=2+Hero&rounded=true&format=svg&background=CEF2EF&bold=true&color=169286" type="image/x-icon">
 
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    {{-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
 
     @livewireStyles
 </head>
