@@ -13,5 +13,9 @@
       wire:model="loud"
     >
 
-    {{ $greeting }} {{ $name }} @if($loud) ! @endif
+    <h2>
+        {{ $greeting }} {{ $name }} @if($loud) ! @endif
+    </h2>
+
+    <button wire:click="resetName">Reset Name</button>
 </div>
