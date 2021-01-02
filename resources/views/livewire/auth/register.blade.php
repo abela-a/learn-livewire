@@ -4,7 +4,7 @@
             Name
         </label>
         <input
-          wire:model="name"
+          wire:model.lazy="name"
           type="text"
           id="name"
           name="name"
@@ -36,7 +36,7 @@
             Password
         </label>
         <input
-          wire:model="password"
+          wire:model.lazy="password"
           type="password"
           id="password"
           name="password"

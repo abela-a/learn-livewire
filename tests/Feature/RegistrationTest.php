@@ -70,6 +70,22 @@ class RegistrationTest extends TestCase
             ->assertHasErrors(['email' => 'unique']);
     }
 
+    public function testSeeEmailHasntAlreadyBeenTakenValidationMessageAsUserType()
+    {
+        User::create([
+            'name' => 'Testing User',
+            'email' => 'user@test.test',
+            'password' => bcrypt('secret'),
+        ]);
+
+        Livewire::test('auth.register')
+            ->set('name', 'Test User')
+            ->set('email', 'use@test.test')
+            ->assertHasNoErrors()
+            ->set('email', 'user@test.test')
+            ->assertHasErrors(['email' => 'unique']);
+    }
+
     public function testPasswordIsRequired()
     {
         Livewire::test('auth.register')
