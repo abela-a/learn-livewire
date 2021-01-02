@@ -14,11 +14,19 @@ class Register extends Component
 
     public function register()
     {
-        User::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'password' => bcrypt($this->password),
+        $data = $this->validate([
+            'name' => ['required'],
+            'email' => ['required', 'email', 'unique:users'],
+            'password' => ['required', 'min:6', 'same:passwordConfirmation'],
         ]);
+
+        User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+        ]);
+
+        return redirect('/');
     }
 
     public function render()

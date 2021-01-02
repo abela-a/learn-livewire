@@ -9,6 +9,11 @@
           id="name"
           name="name"
         >
+        @error('name')
+            <span>
+                {{ $message }}
+            </span>
+        @enderror
     </div>
     <div>
         <label for="email">
@@ -20,6 +25,11 @@
           id="email"
           name="email"
         >
+        @error('email')
+            <span>
+                {{ $message }}
+            </span>
+        @enderror
     </div>
     <div>
         <label for="password">
@@ -31,6 +41,11 @@
           id="password"
           name="password"
         >
+        @error('password')
+            <span>
+                {{ $message }}
+            </span>
+        @enderror
     </div>
     <div>
         <label for="passwordConfirmation">
@@ -42,6 +57,11 @@
           id="passwordConfirmation"
           name="passwordConfirmation"
         >
+        @error('passwordConfirmation')
+            <span>
+                {{ $message }}
+            </span>
+        @enderror
     </div>
     <div>
         <button type="submit">Register</button>
