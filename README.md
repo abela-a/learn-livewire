@@ -67,3 +67,26 @@ saat memanggil method pada `wire:click` kita dapat menambahkan `$event` untuk me
 ### wire:submit.prevent
 
 mengirim form request dan menghilangkan aksi awalnya.
+
+## Lesson 4
+
+### mount()
+
+method lifecycle hook yang dimulai bersamaan saat komponen pertama dipanggil.
+
+- Dapat digunakan untuk mengambil request dari url. `(dependency injection)`
+- Digunakan untuk inisialisasi variable pertama.
+- Jangan gunakan Request di `render` method, karena dapat mengganggu request default ajax livewire.
+
+### hydrate()
+
+method lifecycle hook yang dipanggil disetiap request livewire.
+
+### updated() dan updating()
+
+updated adalah method lifecycle hook yang dipanggil disetiap public properties diubah.
+
+sedangkan updating adalah method yang dipanggil sebelum updated.
+
+method updated dapat ditambahkan dengan nama public properties yang hanya dipanggil jika propertinya diubah.
+`updatedName()`

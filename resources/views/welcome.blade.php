@@ -13,7 +13,7 @@
     @livewireStyles
 </head>
 <body>
-    @livewire('hello-world')
+    @livewire('hello-world', ['name' => 'Anu'])
 
     @livewireScripts
 </body>
